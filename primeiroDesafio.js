@@ -16,12 +16,23 @@ class ListaCompra{
             console.log(`Item: ${this.itens[i]}, Quantidade: ${this.quantidades[i]}`)
         }
     }
-    
-    
 
+    removerItem(nome) {
+        const index = this.itens.indexOf(nome);
+        if (index > -1) {
+            this.itens.splice(index, 1);
+            this.quantidades.splice(index, 1);
+        }
     }
+    }    
+
+    
 
 
 let listaCompras = new ListaCompra();
-listaCompras.mostrarItens()
+listaCompras.adicionarItem("maça", 50);
+listaCompras.adicionarItem("banana", 10);
+listaCompras.mostrarItens();
+listaCompras.removerItem("banana");
+listaCompras.mostrarItens();
 
