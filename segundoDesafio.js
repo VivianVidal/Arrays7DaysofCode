@@ -20,12 +20,14 @@ class ListaPacientes{
     adicionarPaciente(nome, id,estadoSaude){
         let novoPaciente = new Paciente(nome, id, estadoSaude)
         this.listaPacientes.push(novoPaciente);
+        console.log("*" * 20)
     }
 
     mostrarPacientes(){
         for(let i =0; i< this.listaPacientes.length;i++){
             console.log(`Nome: ${this.listaPacientes[i].nome} Identificação: ${this.listaPacientes[i].id} Estado de saúde: ${this.listaPacientes[i].estadoSaude}`)
         }
+        console.log("*" * 20)
     }
 
     removerPacientePrimeiroNo(){
@@ -37,6 +39,9 @@ class ListaPacientes{
         if(index> -1){
             this.listaPacientes.splice(index, 1);
         }
+        else{
+            console.log("Paciente não encontrado!")
+        }
     }
 }
 
@@ -46,5 +51,5 @@ pacientes.adicionarPaciente("hoje", 158456, "Normal");
 pacientes.mostrarPacientes();
 pacientes.adicionarPacientePrimeiroNo("amamha", 987654, "Grave")
 pacientes.mostrarPacientes()
-pacientes.removerPacientePrimeiroNo()
+pacientes.removerPaciente(12356);
 pacientes.mostrarPacientes()

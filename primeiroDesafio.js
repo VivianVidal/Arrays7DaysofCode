@@ -23,7 +23,21 @@ class ListaCompra{
             this.itens.splice(index, 1);
             this.quantidades.splice(index, 1);
         }
+        else{
+            console.log("item não encontrado!")
+        }
     }
+
+    atualizarQuantidade(nome, novaQuantidade) {
+        const index = this.itens.indexOf(nome);
+        if (index > -1) {
+            this.quantidades[index] = novaQuantidade;
+        }
+        else{
+            console.log('Item não encontrado')
+        }
+    }
+
     }    
 
     
@@ -33,6 +47,6 @@ let listaCompras = new ListaCompra();
 listaCompras.adicionarItem("maça", 50);
 listaCompras.adicionarItem("banana", 10);
 listaCompras.mostrarItens();
-listaCompras.removerItem("banana");
+listaCompras.atualizarQuantidade("uva", 20)
 listaCompras.mostrarItens();
 
