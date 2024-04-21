@@ -1,55 +1,62 @@
-class Paciente{
-    constructor(nome, id, estadoSaude, proximo = null){
-        this.nome = nome;
-        this.id = id;
-        this.estadoSaude = estadoSaude;
-        this.proximo = proximo;
+class Paciente {
+    constructor(id, nome, estadoSaude) {
+      this.id = id;
+      this.nome = nome;
+      this.estadoSaude = estadoSaude;
+      this.proximoPaciente = null;
     }
-}
-
-class ListaPacientes{
-    constructor(){
-        this.listaPacientes = []
+  }
+  
+  class ListaDePacientes {
+    constructor() {
+      this.head = null;
     }
-
-    adicionarPacientePrimeiroNo(nome, id ,estadoSaude){
-        let novoPaciente = new Paciente(nome, id, estadoSaude)
-        this.listaPacientes.unshift(novoPaciente);
-    }
-
-    adicionarPaciente(nome, id,estadoSaude){
-        let novoPaciente = new Paciente(nome, id, estadoSaude)
-        this.listaPacientes.push(novoPaciente);
-        console.log("*" * 20)
-    }
-
-    mostrarPacientes(){
-        for(let i =0; i< this.listaPacientes.length;i++){
-            console.log(`Nome: ${this.listaPacientes[i].nome} Identificação: ${this.listaPacientes[i].id} Estado de saúde: ${this.listaPacientes[i].estadoSaude}`)
+  
+    adicionar_paciente(id, nome, estadoSaude) {
+      let novoPaciente = new Paciente(id, nome, estadoSaude);
+      if (this.head === null) {
+        this.head = novoPaciente;
+      } else {
+        let pacienteAtual = this.head;
+        while (pacienteAtual.proximoPaciente !== null) {
+          pacienteAtual = pacienteAtual.proximoPaciente;
         }
-        console.log("*" * 20)
+        pacienteAtual.proximoPaciente = novoPaciente;
+      }
     }
-
-    removerPacientePrimeiroNo(){
-        this.listaPacientes.shift();
-    }
-
-    removerPaciente(id){
-        const index = this.listaPacientes.findIndex(Paciente => Paciente.id === id);
-        if(index> -1){
-            this.listaPacientes.splice(index, 1);
+  
+    remover_paciente(id) {
+      if (this.head === null) {
+        return;
+      } else if (this.head.id === id) {
+        this.head = this.head.proximoPaciente;
+        return;
+      } else {
+        let pacienteAtual = this.head;
+        while (pacienteAtual.proximoPaciente !== null) {
+          if (pacienteAtual.proximoPaciente.id === id) {
+            pacienteAtual.proximoPaciente = pacienteAtual.proximoPaciente.proximoPaciente;
+            return;
+          }
+          pacienteAtual = pacienteAtual.proximoPaciente;
         }
-        else{
-            console.log("Paciente não encontrado!")
-        }
+      }
     }
-}
+  
+    listar_pacientes() {
+      if (this.head === null) {
+        console.log("Não há pacientes nesta lista.");
+      } else {
+        let pacienteAtual = this.head;
+        while (pacienteAtual !== null) {
+          console.log(`Nome: ${pacienteAtual.nome}, ID: ${pacienteAtual.id}, Estado de saúde: ${pacienteAtual.estadoSaude}`);
+          pacienteAtual = pacienteAtual.proximoPaciente;
+        }
+      }
+    }
+  }
+  
+  let listaDePacientes = new ListaDePacientes();
+  
 
-let pacientes = new ListaPacientes();
-pacientes.adicionarPaciente("jack", 123456, "Estável");
-pacientes.adicionarPaciente("hoje", 158456, "Normal");
-pacientes.mostrarPacientes();
-pacientes.adicionarPacientePrimeiroNo("amamha", 987654, "Grave")
-pacientes.mostrarPacientes()
-pacientes.removerPaciente(12356);
-pacientes.mostrarPacientes()
+  
