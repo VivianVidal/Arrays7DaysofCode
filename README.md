@@ -1,6 +1,6 @@
 
 
-# Estrutura de Dados: Arrays | Desafio 7 Days of Code
+# Estrutura de Dados| Desafio 7 Days of Code
 
 Desafios do 7 Days of Code que aceitei para colocar em prática as Estruturas de Dados.
 
