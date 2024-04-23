@@ -15,12 +15,10 @@ O primeiro desafio foi implementar uma versão simplificada de uma lista de comp
 
 ## 2️⃣ Segundo desafio
 
-O segundo desafio foi implementar um sistema de gerenciamento de pacientes em um hospital usando Lista Encadeada,onde cada paciente recebe seu nome, número de identificação e o estado de saúde, respectivamente, os métodos permitiram:
+O segundo desafio foi implementar um sistema de gerenciamento de pacientes em um hospital usando Lista Encadeada,onde cada paciente recebe seu nome, número de identificação e o estado de saúde, os métodos permitem:
 - Adicionar paciente;
 - Remover paciente através do número de identificação;
-- Listar Pacientes;
-- Adicionar paciente no primeiro nó;
-- Remover paciente do primeiro nó.
+- Listar Pacientes.
 
 
 ### 📋 Pré-requisitos
@@ -46,7 +44,4 @@ Antes de começar, certifique-se de ter instalado em seu sistema operacional:
      ```node <nome_do_arquivo.js>```
 
    #### Funciona diretamente no terminal do seu sistema operacional, porém para testar os métodos de forma livre é necessário criar a instância da classe e "chamar" os métodos no arquivo, por isso é recomendado que você tenha um editor de código instalado em sua máquina.
-     
-
->>>>>>> 7d5f5f4a916866a29ab5cf4e150cc121730da651
 
