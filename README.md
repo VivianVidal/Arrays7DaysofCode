@@ -2,8 +2,7 @@
 
 # Estrutura de Dados: Arrays | Desafio 7 Days of Code
 
-Desafios do 7 Days of Code que aceitei para colocar em prática a Estrutura de Dados: Arrays.
-Sua manipulação pode ser desafiadora pois eles armazenam os elementos em sequência na memória.
+Desafios do 7 Days of Code que aceitei para colocar em prática as Estruturas de Dados.
 
 ## 1️⃣ Primeiro desafio 
 
@@ -20,6 +19,13 @@ O segundo desafio foi implementar um sistema de gerenciamento de pacientes em um
 - Remover paciente através do número de identificação;
 - Listar Pacientes.
 
+## 3️⃣ Terceiro Desafio
+
+O terceiro desafio foi implementar um sistema de controle de estoque de uma loja usando uma Lista Duplamente Encadeada, onde cada produto recebe nome, código, preço e quantidade, os métodos permitem:
+- Adicionar produto;
+- Remover produto através do código;
+- Mostrar produtos;
+- Buscar produto através do código.
 
 ### 📋 Pré-requisitos
 
