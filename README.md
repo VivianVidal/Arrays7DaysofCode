@@ -27,6 +27,35 @@ O terceiro desafio foi implementar um sistema de controle de estoque de uma loja
 - Mostrar produtos;
 - Buscar produto através do código.
 
+## 4️⃣Quarto Desafio
+
+O quarto desafio foi implementar uma Fila para gerenciar pedidos de um restaurante, onde cada pedido recebe o número, nome do cliente, itens do pedido e valor total, os métodos permitem: 
+- Adicionar pedido;
+- Mostrar fila de pedidos;
+- Remover pedido entregue.
+
+## 5️⃣ Quinto Desafio
+
+O quinto desafio foi implementar uma Pilha para gerenciar o livros, cada pilha recebe o título do livro e o número e páginas, onde cada método permite: 
+- Adicionar livro;
+- Remover Livro;
+- Exibir Topo da Pilha.
+
+## 6️⃣ Sexto Desafio
+
+O sexto desafio foi implementar um sistema de pontuação para jogos online usando uma técnica de Hashmap, cada jogador terá o nome e o número de pontos associado, os métodos permitem:
+- Adicionar um jogador;
+- Buscar um jogador;
+- Buscar todos os jogadores;
+- Remover um jogador específico.
+
+## 7️⃣Sétimo Desafio
+
+O sétimo desafio foi implementar uma árvore binária que armazena informações de um sistema de gerenciamento de estoque, cada produto recebe o id, nome e quantidade e os métodos da árvore permitem:
+- Adicionar produto na árvore (Através do ID do produto, se já existir ele irá atualiar);
+- Burcar produto na árvore.
+
+  
 ### 📋 Pré-requisitos
 
 Antes de começar, certifique-se de ter instalado em seu sistema operacional:
